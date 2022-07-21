@@ -1,0 +1,26 @@
+{
+    "name": "officity-api-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --timeout 15000 --reporter mochawesome",
+        "test:awesome": "mocha --reporter mochawesome || true",
+        "open:report": "open mochawesome-report/mochawesome.html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chai": "^4.3.6",
+        "chai-http": "^4.3.0",
+        "chai-json-schema": "^1.5.1",
+        "dotenv": "^16.0.1",
+        "mocha": "^10.0.0",
+        "runner": "^4.0.0"
+    },
+    "devDependencies": {
+        "mocha-runner": "^3.0.1",
+        "mochawesome": "^7.1.3"
+    }
+}

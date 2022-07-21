@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "timestamp": {
+            "type": "string"
+        },
+        "response_code": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "array",
+            "items": [{
+                "type": "object",
+                "properties": {
+                    "review": {
+                        "type": "string"
+                    },
+                    "rating": {
+                        "type": "integer"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "fullname": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "null"
+                            },
+                            "pic_url": {
+                                "type": "null"
+                            }
+                        },
+                        "required": ["id", "fullname", "email", "pic_url"]
+                    },
+                    "building": {
+                        "type": "null"
+                    }
+                },
+                "required": ["review", "rating", "user", "building"]
+            }]
+        }
+    },
+    "required": ["timestamp", "response_code", "message", "data"]
+}

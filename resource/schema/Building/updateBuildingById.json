@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "timestamp": {
+            "type": "string"
+        },
+        "response_code": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "building_name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "total_room": {
+                    "type": "integer"
+                },
+                "room_space": {
+                    "type": "integer"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "total_view": {
+                    "type": "integer"
+                },
+                "id_complex": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "building_name",
+                "description",
+                "total_room",
+                "room_space",
+                "address",
+                "total_view",
+                "id_complex"
+            ]
+        }
+    },
+    "required": ["timestamp", "response_code", "message", "data"]
+}

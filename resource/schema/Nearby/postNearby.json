@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "timestamp": {
+            "type": "string"
+        },
+        "response_code": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "id_building": {
+                    "type": "integer"
+                },
+                "id_facility": {
+                    "type": "integer"
+                },
+                "distance": {
+                    "type": "integer"
+                }
+            },
+            "required": ["id_building", "id_facility", "distance"]
+        }
+    },
+    "required": ["timestamp", "response_code", "message", "data"]
+}

@@ -1,0 +1,137 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "timestamp": {
+            "type": "string"
+        },
+        "response_code": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "type": "array",
+                    "items": [{
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "fullname": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "pic_url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["id", "fullname", "email", "pic_url"]
+                    }]
+                },
+                "pageable": {
+                    "type": "object",
+                    "properties": {
+                        "sort": {
+                            "type": "object",
+                            "properties": {
+                                "sorted": {
+                                    "type": "boolean"
+                                },
+                                "empty": {
+                                    "type": "boolean"
+                                },
+                                "unsorted": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": ["sorted", "empty", "unsorted"]
+                        },
+                        "pageNumber": {
+                            "type": "integer"
+                        },
+                        "pageSize": {
+                            "type": "integer"
+                        },
+                        "offset": {
+                            "type": "integer"
+                        },
+                        "paged": {
+                            "type": "boolean"
+                        },
+                        "unpaged": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "sort",
+                        "pageNumber",
+                        "pageSize",
+                        "offset",
+                        "paged",
+                        "unpaged"
+                    ]
+                },
+                "last": {
+                    "type": "boolean"
+                },
+                "totalPages": {
+                    "type": "integer"
+                },
+                "totalElements": {
+                    "type": "integer"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "number": {
+                    "type": "integer"
+                },
+                "sort": {
+                    "type": "object",
+                    "properties": {
+                        "sorted": {
+                            "type": "boolean"
+                        },
+                        "empty": {
+                            "type": "boolean"
+                        },
+                        "unsorted": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": ["sorted", "empty", "unsorted"]
+                },
+                "first": {
+                    "type": "boolean"
+                },
+                "numberOfElements": {
+                    "type": "integer"
+                },
+                "empty": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "content",
+                "pageable",
+                "last",
+                "totalPages",
+                "totalElements",
+                "size",
+                "number",
+                "sort",
+                "first",
+                "numberOfElements",
+                "empty"
+            ]
+        }
+    },
+    "required": ["timestamp", "response_code", "message", "data"]
+}

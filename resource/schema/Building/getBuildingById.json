@@ -1,0 +1,449 @@
+
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string"
+    },
+    "response_code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "building_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "total_room": {
+          "type": "integer"
+        },
+        "room_space": {
+          "type": "integer"
+        },
+        "address": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "image_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "image_url"
+              ]
+            }
+          ]
+        },
+        "total_view": {
+          "type": "integer"
+        },
+        "complex": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "city": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "city"
+          ]
+        },
+        "nearby_facilities": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "distance": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "type",
+                "distance"
+              ]
+            }
+          ]
+        },
+        "schedules": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "from_date": {
+                  "type": "string"
+                },
+                "until_date": {
+                  "type": "string"
+                },
+                "ready": {
+                  "type": "boolean"
+                },
+                "booked": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "from_date",
+                "until_date",
+                "ready",
+                "booked"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "from_date": {
+                  "type": "string"
+                },
+                "until_date": {
+                  "type": "string"
+                },
+                "ready": {
+                  "type": "boolean"
+                },
+                "booked": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "from_date",
+                "until_date",
+                "ready",
+                "booked"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "from_date": {
+                  "type": "string"
+                },
+                "until_date": {
+                  "type": "string"
+                },
+                "ready": {
+                  "type": "boolean"
+                },
+                "booked": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "from_date",
+                "until_date",
+                "ready",
+                "booked"
+              ]
+            }
+          ]
+        },
+        "reviews": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fullname": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "pic_url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fullname",
+                    "email",
+                    "pic_url"
+                  ]
+                }
+              },
+              "required": [
+                "review",
+                "rating",
+                "user"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fullname": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "pic_url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fullname",
+                    "email",
+                    "pic_url"
+                  ]
+                }
+              },
+              "required": [
+                "review",
+                "rating",
+                "user"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fullname": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "pic_url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fullname",
+                    "email",
+                    "pic_url"
+                  ]
+                }
+              },
+              "required": [
+                "review",
+                "rating",
+                "user"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "review": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "fullname": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "pic_url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fullname",
+                    "email",
+                    "pic_url"
+                  ]
+                }
+              },
+              "required": [
+                "review",
+                "rating",
+                "user"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "building_name",
+        "description",
+        "total_room",
+        "room_space",
+        "address",
+        "images",
+        "total_view",
+        "complex",
+        "nearby_facilities",
+        "schedules",
+        "reviews"
+      ]
+    }
+  },
+  "required": [
+    "timestamp",
+    "response_code",
+    "message",
+    "data"
+  ]
+}
+
